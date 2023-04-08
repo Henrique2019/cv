@@ -106,7 +106,7 @@
   <body  class="w3-light-grey" cz-shortcut-listen="true">
   
     <!-- Page Container -->
-    <div id="body" class="w3-content w3-margin-top" style="max-width:1400px;">
+    <div class="w3-content w3-margin-top baixarpdf" style="max-width:1400px;">
       <button id="btnGerarPDF">Gerar PDF</button>
       <!-- The Grid -->
       <div class="w3-row-padding">
@@ -272,10 +272,10 @@
           btnGerarPDF.classList.add('clicked');
           
           // Seleciona o elemento "body"
-          const body = document.querySelector('#body');
+          const body = document.querySelector('.baixarpdf');
     
           // Converte o elemento "body" em PDF
-          html2pdf().from(body).save('henriqueRonald-vc.pdf');
+          html2pdf().from(body).save('henriqueRonald-cv.pdf');
     
           // Ou
           /*
