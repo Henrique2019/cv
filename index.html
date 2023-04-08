@@ -179,47 +179,31 @@
       <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
     <script>
-      var btnGerarPDF = document.getElementById("btnGerarPDF");
-    
-      btnGerarPDF.addEventListener("click", function() {
-        var doc = new jsPDF();
-        
-        // Crie o conteúdo HTML do PDF
-        var conteudoHTML = `
-          <html>
-            <head>
-              <style>
-                body {
-                  background-color: #f0f0f0;
-                  font-family: Arial;
-                }
-                h1 {
-                  color: blue;
-                  font-size: 24px;
-                }
-              </style>
-            </head>
-            <body>
-              <h1>Título do PDF</h1>
-              <p>Este é um parágrafo do PDF.</p>
-            </body>
-          </html>
-        `;
-    
-        // Configure o CSS para o PDF
-        var configCSS = {
-          background: '#fff',
-          margin: [0, 0, 0, 0],
-          filename: 'seu-arquivo-pdf.pdf',
-          image: {type: 'jpeg', quality: 0.98},
-          html2canvas: {dpi: 300, letterRendering: true},
-          jsPDF: {unit: 'in', format: 'letter', orientation: 'portrait'}
-        };
-    
-        // Use o método html2pdf para gerar o PDF com o conteúdo HTML e o CSS configurado
-        html2pdf().set(configCSS).from(conteudoHTML).save();
+      // Seleciona o botão "Gerar PDF"
+      const btnGerarPDF = document.querySelector('#btnGerarPDF');
+  
+      // Adiciona o evento de clique ao botão "Gerar PDF"
+      btnGerarPDF.addEventListener('click', () => {
+  
+          // Seleciona o elemento "body"
+          const body = document.querySelector('#body');
+  
+          // Converte o elemento "body" em PDF
+          html2pdf().from(body).save();
+  
+          // Ou
+          /*
+          // Converte o elemento "body" em PDF usando o jspdf
+          const doc = new jsPDF();
+          doc.html(body, {
+              callback: function (doc) {
+                  doc.save();
+              }
+          });
+          */
+  
       });
-    </script>
+  </script>
 
   </body>
 
