@@ -252,16 +252,16 @@
       // Adiciona o evento de clique ao botão "Gerar PDF"
       btnGerarPDF.addEventListener('click', () => {
   
-          // Seleciona o elemento "pdf"
-          const body = document.getElementsByClassName('pdf');
+          // Seleciona o elemento "body"
+          const body = document.getElementsByClassName('body');
                // oculta o botão
          pdfButton.classList.add('clicked');
-          // Converte o elemento "pdf" em PDF
+          // Converte o elemento "body" em PDF
           html2pdf().from(body).save('henriqueRonald-vc.pdf');
   
           // Ou
           /*
-          // Converte o elemento "pdf" em PDF usando o jspdf
+          // Converte o elemento "body" em PDF usando o jspdf
           const doc = new jsPDF();
           doc.html(pdf, {
               callback: function (doc) {
