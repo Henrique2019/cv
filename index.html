@@ -247,13 +247,13 @@ display: none;
 
       // Seleciona o botão "Gerar PDF"
       const btnGerarPDF = document.querySelector('#btnGerarPDF');
-      
+      btnGerarPDF.addEventListener('click', () => {
+  // oculta o botão
+  btnGerarPDF.classList.add('clicked');
   
       // Adiciona o evento de clique ao botão "Gerar PDF"
       btnGerarPDF.addEventListener('click', () => {
-        btnGerarPDF.addEventListener('click', () => {
-  // oculta o botão
-  btnGerarPDF.classList.add('clicked');
+       
           // Seleciona o elemento "body"
           const body = document.querySelector('#body');
   
