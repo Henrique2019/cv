@@ -72,7 +72,31 @@
       .w3-text-theme {
         color: #000000;
       }
-      
+      #btnGerarPDF {
+        background-color: #4CAF50; /* Cor de fundo */
+        border: none; /* Sem borda */
+        color: white; /* Cor do texto */
+        padding: 16px 32px; /* Espaçamento interno */
+        text-align: center; /* Alinhamento do texto */
+        text-decoration: none; /* Sem sublinhado */
+        display: inline-block; /* Mostra como bloco */
+        font-size: 16px; /* Tamanho da fonte */
+        margin: 10px 0; /* Espaçamento externo */
+        cursor: pointer; /* Cursor do mouse */
+        border-radius: 8px; /* Raio do canto */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+        transition: background-color 0.3s ease; /* Transição de cor */
+    }
+
+    /* Estilo quando o botão é clicado */
+    #btnGerarPDF.clicked {
+        display: none; /* Esconde o botão */
+    }
+
+    /* Estilo quando o botão é hoverado */
+    #btnGerarPDF:hover {
+        background-color: #3e8e41; /* Cor de fundo escura */
+    }
       /* Fim do CSS Minimalista */
     </style>
     
